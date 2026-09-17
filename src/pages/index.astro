@@ -1,823 +1,352 @@
-﻿---
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/prospectum.css';
+
+// Dominio de produccion confirmado por Diego el 17-sep-2026: prospectumai.com. Vive en UNA
+// constante para cambiarlo en un renglon si algun dia se muda.
+const SITE = 'https://prospectumai.com';
+const title = 'Prospectum AI · automatización e inteligencia artificial a la medida';
+const description =
+  'Automatizamos procesos y construimos soluciones de inteligencia artificial a la medida para empresas. Nuestro producto insignia es PAI Logistics, para el sector logístico, hoy enfocado en mueblerías.';
 ---
 
-<html lang="es"><head>
-<meta charset="utf-8" />
-<meta content="width=device-width, initial-scale=1.0" name="viewport" />
-<title>Prospectum AI — Sistemas comerciales inteligentes para México</title>
-<meta name="description" content="Construimos sistemas inteligentes de logística y atención al cliente, conectados a las herramientas que ya usas. Tu operación opera con velocidad y precisión." />
-<meta name="keywords" content="automatización, WhatsApp empresarial, atención al cliente, logística, México, CRM, sistemas comerciales, Prospectum AI" />
-<meta name="author" content="Prospectum AI" />
-<meta name="robots" content="index, follow" />
-<meta name="theme-color" content="#10131a" />
-<link rel="canonical" href="https://prospectum.mx/" />
-<link rel="icon" type="image/png" href="/assets/pai-logo.png" />
-<link rel="apple-touch-icon" href="/assets/pai-logo.png" />
+<Layout title={title} description={description} canonical={`${SITE}/`}>
+<script is:inline>document.documentElement.classList.add('js');</script>
 
-<!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="Prospectum AI" />
-<meta property="og:locale" content="es_MX" />
-<meta property="og:url" content="https://prospectum.mx/" />
-<meta property="og:title" content="Prospectum AI — Sistemas comerciales inteligentes para México" />
-<meta property="og:description" content="Automatiza tu operación. Crece con orden. Construimos sistemas inteligentes de logística y atención al cliente, conectados a las herramientas que ya usas." />
-<meta property="og:image" content="https://prospectum.mx/assets/og-image.png" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Prospectum AI — Sistemas comerciales inteligentes para México" />
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a class="logo" href="#top" aria-label="Prospectum AI, inicio">
+      <b>Prospectum AI</b>
+      <svg viewBox="0 0 96 100" aria-hidden="true"><path fill="#3D42C9" fill-rule="evenodd" d="M0,33C0,14.8 14.8,0 33,0C38.5,0 43.8,1.4 48.4,4L79,21.6C89,27.4 95,38 95,50C95,62 89,72.6 79,78.4L48.4,96C43.8,98.6 38.5,100 33,100C14.8,100 0,85.2 0,67Z M12,40L46,20.5C57,14 70,20.5 70,33L70,67C70,79.5 57,86 46,79.5L12,60C4.5,55.6 4.5,44.4 12,40Z"/></svg>
+    </a>
+    <nav class="nav-links" aria-label="Secciones">
+      <a href="#producto">PAI Logistics</a>
+      <a href="#historia">Cómo se ve</a>
+      <a href="#sistemas">A la medida</a>
+      <a href="#metodo">Cómo trabajamos</a>
+    </nav>
+    <a class="btn btn-p" href="#contacto">Hablemos
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</header>
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Prospectum AI — Sistemas comerciales inteligentes para México" />
-<meta name="twitter:description" content="Automatiza tu operación. Crece con orden. Sistemas inteligentes de logística y atención al cliente." />
-<meta name="twitter:image" content="https://prospectum.mx/assets/og-image.png" />
-<meta name="twitter:image:alt" content="Prospectum AI" />
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="over">Automatización e inteligencia artificial a la medida</p>
+        <h1 aria-label="Orden. Velocidad. Resultados.">
+          <span class="w" aria-hidden="true"><span style="--i:0">Orden<span class="dot">.</span></span></span>
+          <span class="w" aria-hidden="true"><span style="--i:1">Velocidad<span class="dot">.</span></span></span>
+          <span class="w" aria-hidden="true"><span style="--i:2">Resultados<span class="dot">.</span></span></span>
+        </h1>
+        <p class="lead">Ayudamos a las empresas a <strong>automatizar sus procesos</strong> y les construimos <strong>soluciones de inteligencia artificial a su medida</strong>. Tu equipo decide; lo repetible corre solo, le avisa a quien le toca y deja registro de cada paso.</p>
+        <div class="cta-row">
+          <a class="btn btn-p" href="#contacto">Hablemos de tu operación
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-s" href="#producto">Conoce PAI Logistics</a>
+        </div>
+        <p class="hero-note"><span>Logística</span><span>Atención al cliente</span><span>Garantías y postventa</span></p>
+        <p class="mx">Empresa mexicana · hecha en Cancún, Quintana Roo</p>
+      </div>
 
-<!-- JSON-LD structured data -->
-<script type="application/ld+json" is:inline>
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Prospectum AI",
-  "url": "https://prospectum.mx/",
-  "logo": "https://prospectum.mx/assets/pai-logo.png",
-  "description": "Sistemas comerciales inteligentes para empresas en México. Automatización de logística y atención al cliente.",
-  "email": "paisa@prospectumai.com",
-  "address": { "@type": "PostalAddress", "addressCountry": "MX" },
-  "sameAs": []
-}
-</script>
-<link href="/assets/5710dd5f5bb6971d0204e2f5e2238ae3.css" rel="stylesheet" />
-<link href="/assets/a39f5c6fcbb87b419667ec984d2e579a.css" rel="stylesheet" />
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries" is:inline></script>
-<script id="tailwind-config">
-      tailwind.config = {
-        theme: {
-          extend: {
-            "colors": {
-                "background": "#FFFFFF",
-                "surface": "#FFFFFF",
-                "surface-dim": "#FAFAFA",
-                "surface-bright": "#FFFFFF",
-                "surface-container-lowest": "#FFFFFF",
-                "surface-container-low": "#FAFAFA",
-                "surface-container": "#EFEFEF",
-                "surface-container-high": "#E5E5E5",
-                "surface-container-highest": "#DCDCDC",
-                "surface-variant": "#EFEFEF",
-                "surface-tint": "#3D42C9",
-                "on-surface": "#000000",
-                "on-surface-variant": "#72757A",
-                "on-background": "#000000",
-                "outline": "#72757A",
-                "outline-variant": "rgba(0,0,0,0.06)",
-                "primary": "#3D42C9",
-                "on-primary": "#FFFFFF",
-                "primary-container": "#3D42C9",
-                "on-primary-container": "#FFFFFF",
-                "primary-fixed": "#3D42C9",
-                "primary-fixed-dim": "#5B5FE8",
-                "on-primary-fixed": "#FFFFFF",
-                "on-primary-fixed-variant": "#2E33A3",
-                "inverse-primary": "#5B5FE8",
-                "inverse-surface": "#000000",
-                "inverse-on-surface": "#FFFFFF",
-                "secondary": "#EB9360",
-                "on-secondary": "#FFFFFF",
-                "secondary-container": "#FBE5D6",
-                "on-secondary-container": "#7A3E1A",
-                "secondary-fixed": "#FBE5D6",
-                "secondary-fixed-dim": "#EB9360",
-                "on-secondary-fixed": "#5C2A0F",
-                "on-secondary-fixed-variant": "#7A3E1A",
-                "tertiary": "#72757A",
-                "on-tertiary": "#FFFFFF",
-                "tertiary-container": "#EFEFEF",
-                "on-tertiary-container": "#000000",
-                "tertiary-fixed": "#EFEFEF",
-                "tertiary-fixed-dim": "#72757A",
-                "on-tertiary-fixed": "#000000",
-                "on-tertiary-fixed-variant": "#3F4145",
-                "error": "#B3261E",
-                "on-error": "#FFFFFF",
-                "error-container": "#F9DEDC",
-                "on-error-container": "#410E0B"
-            },
-            "borderRadius": {
-                "DEFAULT": "0.125rem",
-                "lg": "0.25rem",
-                "xl": "0.5rem",
-                "full": "0.75rem"
-            },
-            "spacing": {
-                "unit": "4px",
-                "md": "16px",
-                "xs": "4px",
-                "gutter": "24px",
-                "lg": "24px",
-                "sm": "8px",
-                "xl": "48px",
-                "margin": "32px",
-                "xxl": "96px",
-                "container-max": "1440px"
-            },
-            "fontFamily": {
-                "body-base": ["Inter"],
-                "body-sm": ["Inter"],
-                "display-lg": ["Inter"],
-                "headline-md": ["Inter"],
-                "label-caps": ["Inter"]
-            },
-            "fontSize": {
-                "body-base": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
-                "body-sm": ["14px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
-                "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                "headline-md": ["30px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
-                "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}]
-            }
-          },
-        },
-      }
-    </script>
-<style>
-        @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;800&display=swap');
-        html { scroll-behavior: smooth; }
-        body {
-            background-color: #FFFFFF;
-            color: #000000;
-            -webkit-font-smoothing: antialiased;
-        }
-        .glass-panel {
-            background: #FFFFFF;
-            border: 1.5px solid #E0E0E0;
-            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.10);
-            transition: box-shadow 0.3s ease, transform 0.3s ease;
-        }
-        .glass-panel:hover {
-            border-color: #3D42C9;
-            box-shadow: 0 12px 32px rgba(61, 66, 201, 0.15);
-        }
-        .hero-gradient {
-            background: #FFFFFF;
-        }
-        .font-rubik {
-            font-family: 'Rubik', sans-serif;
-        }
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      <div class="console reveal" aria-label="Simulación de una ruta de entregas">
+        <div class="c-top">
+          <span class="c-live"><i></i>SIMULACIÓN · RUTA DEL DÍA</span>
+          <span id="c-clock">10:04</span>
+        </div>
+        <div class="c-body">
+          <div class="c-map"><canvas id="route" aria-hidden="true"></canvas></div>
+          <div class="c-side">
+            <div class="c-kpis">
+              <div class="kpi"><b id="k-ent">5/5</b><small>ENTREGAS</small></div>
+              <div class="kpi"><b id="k-av">10</b><small>AVISOS</small></div>
+              <div class="kpi"><b>0</b><small>LLAMADAS</small></div>
+            </div>
+            <ul class="feed" id="feed" aria-live="off">
+              <li><time>10:04</time><span>Tulum · foto y firma</span><em class="tag tag-ok">ENTREGADO</em></li>
+              <li><time>09:55</time><span>Tulum · vamos en camino</span><em class="tag tag-aviso">AVISO</em></li>
+              <li><time>09:43</time><span>Akumal · foto y firma</span><em class="tag tag-ok">ENTREGADO</em></li>
+              <li><time>09:34</time><span>Akumal · vamos en camino</span><em class="tag tag-aviso">AVISO</em></li>
+            </ul>
+          </div>
+        </div>
+        <p class="c-foot">Ruta de ejemplo. Los lugares son reales; los clientes y las horas, no.</p>
+      </div>
+    </div>
+  </section>
 
-        /* Section background variations — ALTERNANCIA CON CONTRASTE REAL */
-        .bg-section-white { background: #FFFFFF; }
-        .bg-section-gray { background: #F0F0F0; }
-        .bg-section-tinted {
-            background:
-                radial-gradient(ellipse at 80% 20%, rgba(61, 66, 201, 0.10) 0%, transparent 55%),
-                #F5F5F5;
-        }
-        .bg-glow-primary {
-            background:
-                radial-gradient(ellipse at 80% 20%, rgba(61, 66, 201, 0.10) 0%, transparent 55%),
-                #F5F5F5;
-        }
-        .bg-glow-primary-left {
-            background:
-                radial-gradient(ellipse at 15% 80%, rgba(61, 66, 201, 0.10) 0%, transparent 55%),
-                #F5F5F5;
-        }
-        .bg-grid-pattern {
-            background-color: #F0F0F0;
-            background-image:
-                linear-gradient(rgba(61, 66, 201, 0.10) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(61, 66, 201, 0.10) 1px, transparent 1px);
-            background-size: 48px 48px;
-        }
-        .bg-dots-pattern {
-            background-color: #F0F0F0;
-            background-image: radial-gradient(rgba(61, 66, 201, 0.20) 1.5px, transparent 2px);
-            background-size: 28px 28px;
-        }
-        .bg-deep-navy {
-            background: #EFEFEF;
-        }
-        .bg-gradient-cta {
-            background: linear-gradient(135deg, #3D42C9 0%, #5B5FE8 50%, #EB9360 100%);
-        }
-        @keyframes spin { to { transform: rotate(360deg); } }
-    </style>
-</head>
-<body class="font-body-base">
-<!-- TopNavBar -->
-<nav id="top" class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-[#EFEFEF] shadow-2xl">
-<div class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-28">
-<a href="#" onclick="event.preventDefault(); window.scrollTo({top:0, behavior:'smooth'}); return false;" class="flex items-center gap-xs cursor-pointer" aria-label="Volver arriba">
-<img alt="Prospectum AI Logo" class="h-20 w-auto" src="/assets/pai-logo.png" />
-</a>
-<div class="flex items-center gap-md">
-<div class="hidden md:flex items-center gap-lg">
-<a class="text-on-surface-variant font-rubik text-sm font-light hover:text-primary transition-colors duration-300 ease-out active:scale-95" href="#sistemas">Sistemas</a>
-<a class="text-on-surface-variant font-rubik text-sm font-light hover:text-primary transition-colors duration-300 ease-out active:scale-95" href="#nosotros">Nosotros</a>
-<a class="text-on-surface-variant font-rubik text-sm font-light hover:text-primary transition-colors duration-300 ease-out active:scale-95" href="#contacto">Contacto</a>
-</div>
-<button type="button" id="open-contact-modal" class="bg-[#3D42C9] text-white font-label-caps px-md py-xs rounded-full hover:bg-[#2E33A3] transition-all duration-300 active:scale-95 cursor-pointer">
-                Contáctanos
-            </button>
-</div>
-</div>
-</nav>
-<main>
-<!-- Hero Section -->
-<section class="relative min-h-screen flex items-center justify-center pt-28 overflow-hidden">
-<div class="absolute inset-0 hero-gradient pointer-events-none" />
-<div class="max-w-container-max mx-auto px-gutter relative z-10 text-center">
-<div class="inline-block mb-md px-md py-xs rounded-full border border-[#EFEFEF] bg-black/[0.02] backdrop-blur-sm">
-<span class="font-label-caps text-primary tracking-widest text-[10px]">AUTOMATIZACIÓN · WHATSAPP · TURISMO · LOGÍSTICA</span>
-</div>
-<h1 class="font-rubik text-[48px] md:text-[72px] mb-md leading-[1.05] max-w-5xl mx-auto font-bold">
-                    Sistemas comerciales inteligentes para México.
-                </h1>
-<p class="font-rubik text-primary text-xl md:text-2xl mb-lg font-light italic">
-                    Automatiza tu operación. Crece con orden.
-                </p>
-<p class="font-rubik text-on-surface-variant max-w-2xl mx-auto mb-xl leading-relaxed font-light">
-                    Construimos sistemas inteligentes de logística y atención al cliente, conectados a las herramientas que ya usas. Tu operación opera con velocidad y precisión.
-                </p>
-<div class="flex flex-col md:flex-row justify-center gap-md">
-<a href="#contacto" class="bg-[#3D42C9] text-white font-label-caps px-xl py-md rounded-full hover:bg-[#2E33A3] transition-all duration-300 active:scale-95">
-                        Hablar con nosotros
-                    </a>
-<a href="#sistemas" class="bg-transparent border border-black/15 hover:border-black/40 text-on-surface font-label-caps px-xl py-md rounded-full transition-all duration-300">
-                        Ver nuestros sistemas
-                    </a>
-</div>
-</div>
-</section>
+  <section class="sec prod" id="producto">
+    <div class="wrap">
+      <div class="prod-grid">
+        <div class="reveal">
+          <span class="badge"><i></i>El producto que estamos empujando</span>
+          <h2 class="prod-name">PAI Logistics</h2>
+          <p class="lead">El sistema que coordina las entregas, le avisa al cliente en cada paso y deja bitácora de todo.</p>
+          <div class="prod-cta">
+            <a class="btn btn-p" href="#historia">Ver un pedido de principio a fin
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn-s" href="#contacto">Quiero una demo</a>
+          </div>
+        </div>
+        <div class="reveal" style="--d:1">
+          <ul class="prod-list">
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><span><strong>Construido para el sector logístico.</strong> Rutas, unidades, conductores, cupo y entregas, con la operación completa en un tablero.</span></li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><span><strong>Hoy enfocado en mueblerías.</strong> Entregas voluminosas, fechas que se mueven, garantías y postventa: el caso más duro es el que estamos resolviendo.</span></li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><span><strong>El cliente se entera solo.</strong> Fecha, salida, llegada y entrega salen por WhatsApp sin que nadie tenga que acordarse.</span></li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><span><strong>Todo queda registrado.</strong> Quién, qué, cuándo y con qué resultado, para auditar sin pedir reportes.</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="prod-foot">
+        <span><b>Entregas</b> rutas, cupo y evidencia</span>
+        <span><b>Avisos</b> WhatsApp en cada paso</span>
+        <span><b>Garantías</b> del reporte a la reentrega</span>
+        <span><b>Tablero</b> coordinación, bodega, ventas y dirección</span>
+      </p>
+    </div>
+  </section>
 
-<!-- Cómo trabajamos -->
-<section class="py-xxl border-y border-[#EFEFEF] bg-grid-pattern">
-<div class="max-w-container-max mx-auto px-gutter">
-<div class="text-center mb-xxl">
-<span class="font-label-caps text-primary mb-sm block tracking-widest">CÓMO TRABAJAMOS</span>
-<h2 class="font-rubik text-[40px] font-bold leading-tight">Cuatro principios en cada implementación.</h2>
-<p class="font-rubik text-on-surface-variant max-w-2xl mx-auto mt-md font-light">
-                    Construimos sistemas que tu equipo entiende, controla y opera con confianza.
-                </p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-md">
-<div class="glass-panel p-lg rounded-xl group hover:bg-black/[0.02] transition-all duration-500">
-<div class="w-12 h-12 rounded-lg bg-primary/15 flex items-center justify-center mb-lg">
-<span class="material-symbols-outlined text-primary">visibility</span>
-</div>
-<h3 class="font-rubik text-lg mb-sm text-on-surface font-medium">Diseño visible</h3>
-<p class="font-rubik text-sm text-on-surface-variant leading-relaxed font-light">
-                            Cada flujo es trazable. Sin caja negra. Sabes qué hace cada paso del sistema.
-                        </p>
-</div>
-<div class="glass-panel p-lg rounded-xl group hover:bg-black/[0.02] transition-all duration-500">
-<div class="w-12 h-12 rounded-lg bg-primary/15 flex items-center justify-center mb-lg">
-<span class="material-symbols-outlined text-primary">history_edu</span>
-</div>
-<h3 class="font-rubik text-lg mb-sm text-on-surface font-medium">Trazabilidad real</h3>
-<p class="font-rubik text-sm text-on-surface-variant leading-relaxed font-light">
-                            Cada acción del sistema queda registrada. Auditas la operación cuando lo necesites.
-                        </p>
-</div>
-<div class="glass-panel p-lg rounded-xl group hover:bg-black/[0.02] transition-all duration-500">
-<div class="w-12 h-12 rounded-lg bg-primary/15 flex items-center justify-center mb-lg">
-<span class="material-symbols-outlined text-primary">tune</span>
-</div>
-<h3 class="font-rubik text-lg mb-sm text-on-surface font-medium">Adaptable a tu operación</h3>
-<p class="font-rubik text-sm text-on-surface-variant leading-relaxed font-light">
-                            No te forzamos a cambiar tus procesos. Construimos alrededor de cómo ya trabajas.
-                        </p>
-</div>
-<div class="glass-panel p-lg rounded-xl group hover:bg-black/[0.02] transition-all duration-500">
-<div class="w-12 h-12 rounded-lg bg-primary/15 flex items-center justify-center mb-lg">
-<span class="material-symbols-outlined text-primary">hub</span>
-</div>
-<h3 class="font-rubik text-lg mb-sm text-on-surface font-medium">Conecta con todo</h3>
-<p class="font-rubik text-sm text-on-surface-variant leading-relaxed font-light">
-                            WhatsApp, CRM, Notion, hojas de cálculo. Tu sistema habla con las herramientas que ya usas.
-                        </p>
-</div>
-</div>
-</div>
-</section>
+  <section class="sec story" id="historia">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="over">PAI Logistics · cómo se ve</p>
+        <h2 class="h2">Un pedido, de principio a fin.</h2>
+        <p class="lead">Lo que lee tu cliente en su teléfono y lo que queda en la bitácora de tu operación. Nadie tuvo que acordarse de avisar.</p>
+      </div>
+      <div class="story-grid">
+        <div class="phone-col" aria-hidden="true">
+          <div class="phone">
+            <div class="p-screen">
+              <div class="p-head">
+                <span class="p-av"><svg viewBox="0 0 96 100"><path fill="#3D42C9" fill-rule="evenodd" d="M0,33C0,14.8 14.8,0 33,0C38.5,0 43.8,1.4 48.4,4L79,21.6C89,27.4 95,38 95,50C95,62 89,72.6 79,78.4L48.4,96C43.8,98.6 38.5,100 33,100C14.8,100 0,85.2 0,67Z M12,40L46,20.5C57,14 70,20.5 70,33L70,67C70,79.5 57,86 46,79.5L12,60C4.5,55.6 4.5,44.4 12,40Z"/></svg></span>
+                <span><b>Tu mueblería</b><small>asistente de entregas</small></span>
+              </div>
+              <div class="p-chat" id="chat">
+                <div class="msg shown" data-step="1">Hola Mariana, tu pedido quedó registrado. Te escribimos por aquí en cuanto tenga fecha de entrega.<time>lun 10:02</time></div>
+                <div class="msg shown" data-step="2">Tu entrega quedó para el jueves 18 por la mañana. Si ese día no te queda, contéstanos y la movemos.<time>lun 16:30</time></div>
+                <div class="msg me shown" data-step="2">Perfecto, ese día estoy.<time>lun 16:41</time></div>
+                <div class="msg shown" data-step="3">Vamos en camino. Llegamos entre 10:00 y 10:30.<time>jue 09:41</time></div>
+                <div class="msg shown" data-step="4">Entregamos tu pedido. ¿Llegó todo bien?<time>jue 10:18</time></div>
+                <div class="msg me shown" data-step="4">Todo bien, gracias.<time>jue 10:20</time></div>
+                <div class="msg shown" data-step="5">Gracias por tu compra. Si algo necesita atención, escríbenos aquí mismo y abrimos tu garantía.<time>jue 10:40</time></div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-<!-- Quiénes somos -->
-<section id="nosotros" class="py-xxl bg-glow-primary">
-<div class="max-w-container-max mx-auto px-gutter">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-xl items-center">
-<div>
-<span class="font-label-caps text-primary mb-sm block tracking-widest">QUIÉNES SOMOS</span>
-<h2 class="font-rubik text-[40px] mb-md font-bold leading-tight">Una empresa que entrega lo que dice.</h2>
-<p class="font-rubik text-on-surface-variant font-light leading-relaxed">
-                        Prospectum AI construye sistemas inteligentes para empresas en México. Asistentes que responden en minutos, operaciones logísticas con trazabilidad completa, y atención al cliente que nunca para. No somos el proveedor que instala y desaparece. Implementamos, enseñamos y acompañamos.
-                    </p>
-</div>
-<div class="grid grid-cols-2 gap-md">
-<div class="glass-panel p-lg rounded-xl text-center">
-<p class="font-rubik text-4xl font-bold text-primary mb-xs">24/7</p>
-<p class="font-rubik text-xs text-on-surface-variant font-light">Operación continua sin interrupciones</p>
-</div>
-<div class="glass-panel p-lg rounded-xl text-center">
-<p class="font-rubik text-4xl font-bold text-primary mb-xs">&lt; 2 min</p>
-<p class="font-rubik text-xs text-on-surface-variant font-light">Tiempo de respuesta al cliente</p>
-</div>
-<div class="glass-panel p-lg rounded-xl text-center">
-<p class="font-rubik text-4xl font-bold text-primary mb-xs">2</p>
-<p class="font-rubik text-xs text-on-surface-variant font-light">Verticales de especialización</p>
-</div>
-<div class="glass-panel p-lg rounded-xl text-center">
-<p class="font-rubik text-4xl font-bold text-primary mb-xs">MX</p>
-<p class="font-rubik text-xs text-on-surface-variant font-light">Construido para el mercado mexicano</p>
-</div>
-</div>
-</div>
-</div>
-</section>
+        <ol class="steps" id="steps">
+          <li class="step" data-step="1">
+            <p class="s-when"><i></i>Lunes · 10:02</p>
+            <h3>El pedido se aprueba.</h3>
+            <p class="s-bubble">Hola Mariana, tu pedido quedó registrado. Te escribimos por aquí en cuanto tenga fecha de entrega.</p>
+            <p class="s-log"><b>BITÁCORA</b>Pedido 1042 aprobado · vendedor notificado · cliente saludado</p>
+          </li>
+          <li class="step" data-step="2">
+            <p class="s-when"><i></i>Lunes · 16:30</p>
+            <h3>Se le asigna fecha y ruta.</h3>
+            <p class="s-bubble">Tu entrega quedó para el jueves 18 por la mañana. Si ese día no te queda, contéstanos y la movemos.</p>
+            <p class="s-log"><b>BITÁCORA</b>Ruta Playa AM · parada 3 de 7 · cliente confirmó a las 16:41</p>
+          </li>
+          <li class="step" data-step="3">
+            <p class="s-when"><i></i>Jueves · 09:41</p>
+            <h3>La unidad sale y el cliente lo sabe.</h3>
+            <p class="s-bubble">Vamos en camino. Llegamos entre 10:00 y 10:30.</p>
+            <p class="s-log"><b>BITÁCORA</b>Unidad salió del centro de distribución · aviso entregado al teléfono</p>
+          </li>
+          <li class="step" data-step="4">
+            <p class="s-when"><i></i>Jueves · 10:18</p>
+            <h3>Se entrega con evidencia.</h3>
+            <p class="s-bubble">Entregamos tu pedido. ¿Llegó todo bien?</p>
+            <p class="s-log"><b>BITÁCORA</b>Foto y firma guardadas · coordinación ve el cierre sin llamar</p>
+          </li>
+          <li class="step" data-step="5">
+            <p class="s-when"><i></i>Jueves · 10:40</p>
+            <h3>Y la postventa queda abierta.</h3>
+            <p class="s-bubble">Gracias por tu compra. Si algo necesita atención, escríbenos aquí mismo y abrimos tu garantía.</p>
+            <p class="s-log"><b>BITÁCORA</b>Encuesta enviada · garantía disponible por el mismo chat</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
 
-<!-- Sistemas: Logística -->
-<section id="sistemas" class="py-xxl bg-dots-pattern border-y border-[#EFEFEF]">
-<div class="max-w-container-max mx-auto px-gutter">
-<div class="text-center mb-xxl">
-<span class="font-label-caps text-primary mb-sm block tracking-widest">SISTEMAS</span>
-<h2 class="font-rubik text-[40px] font-bold leading-tight">Dos verticales, un solo estándar.</h2>
-</div>
+  <section class="sec" id="sistemas">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="over">Qué corre por ti</p>
+        <h2 class="h2">Lo repetible, resuelto. Lo crítico, en manos de tu equipo.</h2>
+      </div>
+      <div class="bento" id="bento">
+        <article class="tile t-a reveal">
+          <h3>Avisos por WhatsApp en el momento exacto</h3>
+          <p>Confirmación, fecha, en camino y entregado. Cada aviso sale solo, una vez, y se sabe si llegó.</p>
+          <div class="viz chips" aria-hidden="true">
+            <div class="chip"><i></i><span>Tu entrega quedó para el jueves</span><time>16:30</time></div>
+            <div class="chip"><i></i><span>Vamos en camino</span><time>09:41</time></div>
+            <div class="chip"><i></i><span>Entregamos tu pedido</span><time>10:18</time></div>
+          </div>
+        </article>
+        <article class="tile t-b reveal" style="--d:1">
+          <h3>Rutas con cupo a la vista</h3>
+          <p>Cuánto le cabe a cada ruta, antes de prometer una fecha.</p>
+          <div class="viz load" aria-hidden="true">
+            <div><strong>Cancún AM</strong><span>62%</span><u style="--v:62%"></u></div>
+            <div><strong>Playa AM</strong><span>88%</span><u style="--v:88%"></u></div>
+            <div><strong>Tulum PM</strong><span>35%</span><u style="--v:35%"></u></div>
+          </div>
+        </article>
+        <article class="tile t-c reveal">
+          <h3>Garantías con seguimiento</h3>
+          <p>Del reporte a la reentrega, cada cambio de estado avisa a quien le toca.</p>
+          <div class="viz flow" aria-hidden="true"><span>Abierta</span><em>→</em><span>Taller</span><em>→</em><span>Lista</span><em>→</em><span>Entregada</span></div>
+        </article>
+        <article class="tile t-d reveal" style="--d:1">
+          <h3>Atención a toda hora</h3>
+          <p>El asistente contesta y escala a una persona cuando el caso lo pide.</p>
+          <div class="viz"><div class="big">&lt;2 min</div><p class="example" style="margin-top:8px">EN RESPONDER</p></div>
+        </article>
+        <article class="tile t-e reveal" style="--d:2">
+          <h3>Bitácora de todo</h3>
+          <p>Quién, qué, cuándo y con qué resultado. Se audita sin pedir reportes.</p>
+          <div class="viz logl" aria-hidden="true"><b>10:18</b> entrega · foto y firma<br><b>10:19</b> aviso · entregado<br><b>10:40</b> encuesta · enviada</div>
+        </article>
+        <article class="tile t-f reveal">
+          <h3>Un tablero para dirección</h3>
+          <p>El estado de la operación de hoy, sin armar hojas a mano cada lunes.</p>
+          <div class="viz dash" aria-hidden="true">
+            <div class="k"><b>31</b><span>entregas hoy</span></div>
+            <div class="k"><b>97%</b><span>a tiempo</span></div>
+            <div class="k"><b>2</b><span>garantías abiertas</span></div>
+            <svg viewBox="0 0 320 96" preserveAspectRatio="none">
+              <path d="M0 70 L40 62 L80 66 L120 48 L160 52 L200 34 L240 40 L280 22 L320 18 L320 96 L0 96 Z" fill="rgba(61,66,201,.10)"/>
+              <path d="M0 70 L40 62 L80 66 L120 48 L160 52 L200 34 L240 40 L280 22 L320 18" fill="none" stroke="#3D42C9" stroke-width="2" vector-effect="non-scaling-stroke"/>
+              <line x1="0" y1="95" x2="320" y2="95" stroke="#E3E4EC"/>
+            </svg>
+          </div>
+          <p class="example">DATOS DE EJEMPLO</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
-<!-- Vertical 1: Logística -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-xl items-center mb-xxl">
-<div>
-<span class="font-label-caps text-primary mb-sm block tracking-widest">AUTOMATIZACIÓN LOGÍSTICA</span>
-<h3 class="font-rubik text-[32px] mb-md font-bold leading-tight">Visibilidad completa. Cliente siempre informado.</h3>
-<p class="font-rubik text-on-surface-variant mb-lg font-light leading-relaxed">
-                        Automatizamos la comunicación entre tu operación y tus clientes. Desde que sale el pedido hasta que lo entregan, cada paso queda registrado y notificado sin intervención humana.
-                    </p>
-<ul class="space-y-sm">
-<li class="flex gap-sm items-start"><span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span><span class="font-rubik text-sm text-on-surface-variant font-light">Tracking de entregas en tiempo real vía WhatsApp</span></li>
-<li class="flex gap-sm items-start"><span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span><span class="font-rubik text-sm text-on-surface-variant font-light">Notificaciones automáticas en cada etapa del proceso</span></li>
-<li class="flex gap-sm items-start"><span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span><span class="font-rubik text-sm text-on-surface-variant font-light">Panel de visibilidad operativa para la dirección</span></li>
-<li class="flex gap-sm items-start"><span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span><span class="font-rubik text-sm text-on-surface-variant font-light">Gestión de garantías y postventa automatizada</span></li>
-<li class="flex gap-sm items-start"><span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span><span class="font-rubik text-sm text-on-surface-variant font-light">Coordinación entre bodega y equipo de entregas</span></li>
-</ul>
-</div>
-<!-- Mock dashboard -->
-<div class="glass-panel rounded-xl p-lg">
-<p class="font-label-caps text-on-surface-variant mb-md tracking-widest">DASHBOARD EN VIVO</p>
-<div class="space-y-md">
-<div class="flex justify-between items-center pb-sm border-b border-[#EFEFEF]"><span class="font-rubik text-sm text-on-surface-variant font-light">Entregas programadas hoy</span><span class="font-rubik text-2xl font-bold text-primary">24</span></div>
-<div class="flex justify-between items-center pb-sm border-b border-[#EFEFEF]"><span class="font-rubik text-sm text-on-surface-variant font-light">Entregados</span><span class="font-rubik text-2xl font-bold text-on-surface">18</span></div>
-<div class="flex justify-between items-center pb-sm border-b border-[#EFEFEF]"><span class="font-rubik text-sm text-on-surface-variant font-light">En camino</span><span class="font-rubik text-2xl font-bold text-on-surface">6</span></div>
-<div class="pt-sm">
-<p class="font-label-caps text-on-surface-variant mb-sm text-xs tracking-widest">NOTIFICACIONES ENVIADAS</p>
-<div class="space-y-xs text-xs font-rubik text-on-surface-variant font-light">
-<div class="flex justify-between"><span>· Confirmación de pedido</span><span class="text-primary">24</span></div>
-<div class="flex justify-between"><span>· Aviso de salida</span><span class="text-primary">18</span></div>
-<div class="flex justify-between"><span>· En camino</span><span class="text-primary">6</span></div>
-</div>
-</div>
-</div>
-</div>
-</div>
+  <section class="sec" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="over">Y lo que construimos a la medida</p>
+        <h2 class="h2">Si tu proceso no cabe en un producto, se construye.</h2>
+        <p class="lead">PAI Logistics nació resolviendo una operación real. Lo que no entra ahí lo hacemos a la medida, con la misma regla: sale con su prueba, no con una promesa.</p>
+      </div>
+      <div class="fronts">
+        <article class="front reveal">
+          <p class="over">Procesos a la medida</p>
+          <h3>Automatizamos lo que hoy se hace a mano.</h3>
+          <p>Capturas, avisos, seguimientos y reportes que alguien de tu equipo repite todos los días y ya no debería repetir.</p>
+          <ul class="ticks">
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Conectamos lo que ya usas: WhatsApp, tu CRM y tus hojas</li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Documentos que se leen solos y se vuelven datos</li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Tableros con lo que tu dirección necesita ver hoy</li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Cada automatización deja registro de lo que hizo</li>
+          </ul>
+        </article>
+        <article class="front reveal" style="--d:1">
+          <p class="over">Atención al cliente</p>
+          <h3>Responde en minutos. Escala cuando importa.</h3>
+          <p>Un asistente que atiende por WhatsApp, califica interesados y pasa el caso a tu equipo cuando hace falta criterio.</p>
+          <ul class="ticks">
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Disponible a toda hora, también en fin de semana</li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Califica y agenda con tu equipo comercial</li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Escalamiento a una persona en los momentos críticos</li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Todo queda en tu CRM, no en conversaciones sueltas</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
 
-<!-- Vertical 2: Turismo -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-xl items-center">
-<!-- Imagen real WhatsApp (left on desktop) -->
-<div class="relative order-2 md:order-1">
-<div class="relative rounded-xl overflow-hidden border border-[#EFEFEF] shadow-[0_8px_40px_rgba(0,0,0,0.12)]">
-<img src="/assets/img-whatsapp-chat.jpg" alt="Cliente conversando por WhatsApp con asistente digital" class="w-full h-auto object-cover" loading="lazy" />
-<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
-<div class="absolute bottom-0 left-0 right-0 p-md">
-<p class="font-rubik text-xs text-white font-light italic">Tiempo de respuesta: menos de 30 segundos</p>
-</div>
-</div>
-</div>
-<div class="order-1 md:order-2">
-<span class="font-label-caps text-primary mb-sm block tracking-widest">ATENCIÓN AL CLIENTE · TURISMO</span>
-<h3 class="font-rubik text-[32px] mb-md font-bold leading-tight">Responde en segundos. Escala cuando importa.</h3>
-<p class="font-rubik text-on-surface-variant mb-lg font-light leading-relaxed">
-                        Operadores digitales que atienden a tus clientes las 24 horas, califican prospectos y escalan a un agente humano solo cuando es verdaderamente necesario.
-                    </p>
-<ul class="space-y-sm">
-<li class="flex gap-sm items-start"><span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span><span class="font-rubik text-sm text-on-surface-variant font-light">Operadores digitales disponibles 24/7 por WhatsApp</span></li>
-<li class="flex gap-sm items-start"><span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span><span class="font-rubik text-sm text-on-surface-variant font-light">Calificación automática de prospectos e interesados</span></li>
-<li class="flex gap-sm items-start"><span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span><span class="font-rubik text-sm text-on-surface-variant font-light">Flujos de bienvenida para resorts y clubes vacacionales</span></li>
-<li class="flex gap-sm items-start"><span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span><span class="font-rubik text-sm text-on-surface-variant font-light">Escalamiento inteligente en momentos críticos</span></li>
-<li class="flex gap-sm items-start"><span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span><span class="font-rubik text-sm text-on-surface-variant font-light">Seguimiento automatizado del proceso comercial</span></li>
-</ul>
-</div>
-</div>
-</div>
-</section>
+  <section class="sec story" id="metodo">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="over">Cómo trabajamos</p>
+        <h2 class="h2">Implementamos, enseñamos y acompañamos.</h2>
+        <p class="lead">No instalamos una herramienta y desaparecemos. Construimos alrededor de cómo ya opera tu empresa.</p>
+      </div>
+      <div class="method" id="method">
+        <div class="m-step"><p class="n">01 · Diagnóstico</p><h3>Medimos antes de proponer.</h3><p>Vemos cómo se mueve hoy un pedido, dónde se pierde tiempo y qué se avisa a mano.</p></div>
+        <div class="m-step"><p class="n">02 · Implementación</p><h3>Construimos sobre lo que usas.</h3><p>WhatsApp, tu CRM y tus hojas. Cada cambio sale con su prueba, no con una promesa.</p></div>
+        <div class="m-step"><p class="n">03 · Acompañamiento</p><h3>Tu equipo opera, nosotros medimos.</h3><p>Capacitamos a cada rol y seguimos revisando lo que el sistema registra.</p></div>
+      </div>
+      <p class="over" style="margin-top:clamp(64px,8vw,104px);color:var(--muted)">Se conecta con lo que ya usas</p>
+      <div class="marquee" aria-label="Integraciones">
+        <div class="track">
+          <span>WhatsApp Business</span><span>Google Workspace</span><span>CRM empresarial</span><span>Notion</span><span>Hojas de cálculo</span><span>Bases de datos</span><span>Correo empresarial</span><span>Calendarios</span>
+          <span aria-hidden="true">WhatsApp Business</span><span aria-hidden="true">Google Workspace</span><span aria-hidden="true">CRM empresarial</span><span aria-hidden="true">Notion</span><span aria-hidden="true">Hojas de cálculo</span><span aria-hidden="true">Bases de datos</span><span aria-hidden="true">Correo empresarial</span><span aria-hidden="true">Calendarios</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- Integraciones -->
-<section class="py-xxl bg-glow-primary-left">
-<div class="max-w-container-max mx-auto px-gutter">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-xl items-center mb-xxl">
-<div class="relative">
-<div class="relative rounded-xl overflow-hidden border border-[#EFEFEF] shadow-[0_8px_40px_rgba(0,0,0,0.12)]">
-<img src="/assets/img-social-apps.jpg" alt="Smartphone mostrando carpeta de apps de comunicación: WhatsApp, Instagram, Telegram, Messenger, LinkedIn y más" class="w-full h-auto object-cover" loading="lazy" />
-</div>
-</div>
-<div>
-<span class="font-label-caps text-primary mb-sm block tracking-widest">INTEGRACIONES</span>
-<h2 class="font-rubik text-[40px] font-bold leading-tight mb-md">Conecta con todo lo que ya usas.</h2>
-<p class="font-rubik text-on-surface-variant font-light leading-relaxed">
-                        Tu sistema habla con las herramientas que tu equipo ya domina, sin reemplazar lo que funciona. WhatsApp, CRM, Notion, hojas de cálculo y todo el ecosistema digital de tu empresa, conectados al mismo flujo.
-                    </p>
-</div>
-</div>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-md">
-<div class="glass-panel p-md rounded-xl text-center hover:bg-black/[0.02] transition-colors duration-300">
-<span class="material-symbols-outlined text-primary text-3xl mb-sm block">chat</span>
-<p class="font-rubik text-sm font-medium">WhatsApp Business</p>
-</div>
-<div class="glass-panel p-md rounded-xl text-center hover:bg-black/[0.02] transition-colors duration-300">
-<span class="material-symbols-outlined text-primary text-3xl mb-sm block">workspace_premium</span>
-<p class="font-rubik text-sm font-medium">Google Workspace</p>
-</div>
-<div class="glass-panel p-md rounded-xl text-center hover:bg-black/[0.02] transition-colors duration-300">
-<span class="material-symbols-outlined text-primary text-3xl mb-sm block">contact_page</span>
-<p class="font-rubik text-sm font-medium">CRM empresarial</p>
-</div>
-<div class="glass-panel p-md rounded-xl text-center hover:bg-black/[0.02] transition-colors duration-300">
-<span class="material-symbols-outlined text-primary text-3xl mb-sm block">description</span>
-<p class="font-rubik text-sm font-medium">Notion</p>
-</div>
-<div class="glass-panel p-md rounded-xl text-center hover:bg-black/[0.02] transition-colors duration-300">
-<span class="material-symbols-outlined text-primary text-3xl mb-sm block">table_chart</span>
-<p class="font-rubik text-sm font-medium">Hojas de cálculo</p>
-</div>
-<div class="glass-panel p-md rounded-xl text-center hover:bg-black/[0.02] transition-colors duration-300">
-<span class="material-symbols-outlined text-primary text-3xl mb-sm block">database</span>
-<p class="font-rubik text-sm font-medium">Bases de datos</p>
-</div>
-<div class="glass-panel p-md rounded-xl text-center hover:bg-black/[0.02] transition-colors duration-300">
-<span class="material-symbols-outlined text-primary text-3xl mb-sm block">mail</span>
-<p class="font-rubik text-sm font-medium">Email empresarial</p>
-</div>
-<div class="glass-panel p-md rounded-xl text-center hover:bg-black/[0.02] transition-colors duration-300">
-<span class="material-symbols-outlined text-primary text-3xl mb-sm block">calendar_month</span>
-<p class="font-rubik text-sm font-medium">Calendarios</p>
-</div>
-</div>
-</div>
-</section>
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="over">Precisión verificable</p>
+        <h2 class="h2">Sin superlativos. Con registro.</h2>
+      </div>
+      <div class="proof">
+        <div class="pr reveal"><b>24/7</b><p>Los avisos y el asistente no tienen horario de oficina.</p><small>cómo se ve: la hora de cada aviso en la bitácora</small></div>
+        <div class="pr reveal" style="--d:1"><b>&lt;2 min</b><p>Tiempo en que el asistente contesta por WhatsApp.</p><small>cómo se ve: hora del mensaje contra hora de la respuesta</small></div>
+        <div class="pr reveal" style="--d:2"><b>100%</b><p>De los avisos quedan registrados: a quién, qué y cuándo.</p><small>cómo se ve: cada fila de la bitácora</small></div>
+      </div>
+      <p class="claim reveal">Lo que decimos, <em>lo entregamos.</em></p>
+    </div>
+  </section>
 
-<!-- Capacidades — Feature Carousel -->
-<section class="py-xxl bg-deep-navy border-y border-[#EFEFEF]">
-<div class="max-w-container-max mx-auto px-gutter">
-<div class="text-center mb-xxl">
-<span class="font-label-caps text-primary mb-sm block tracking-widest">CAPACIDADES</span>
-<h2 class="font-rubik text-[40px] font-bold leading-tight">Todo lo que incluye trabajar con nosotros.</h2>
-<p class="font-rubik text-on-surface-variant max-w-2xl mx-auto mt-md font-light">
-                    Cada implementación viene con herramientas para que tu operación funcione sin depender de intervención manual constante.
-                </p>
-<p class="font-rubik text-xs text-on-surface-variant mt-md font-light italic md:hidden">Desliza para ver más →</p>
-</div>
-
-<div class="relative">
-<!-- Carousel container con scroll-snap (autoplay automático, sin botones) -->
-<div id="cap-carousel" class="no-scrollbar flex overflow-x-auto snap-x snap-mandatory gap-md pb-md scroll-smooth -mx-gutter px-gutter">
-
-<!-- Slide 1 -->
-<article data-cap-slide="0" class="snap-center shrink-0 w-[88%] md:w-[640px] lg:w-[720px] glass-panel rounded-xl p-xl flex flex-col md:flex-row gap-lg items-center md:items-stretch">
-<div class="flex-shrink-0 w-20 h-20 rounded-2xl bg-primary/15 flex items-center justify-center">
-<span class="material-symbols-outlined text-primary text-5xl">notifications_active</span>
-</div>
-<div class="flex-1 text-center md:text-left">
-<span class="font-label-caps text-primary mb-sm block tracking-widest text-[10px]">CAPACIDAD 01 / 04</span>
-<h3 class="font-rubik text-2xl md:text-3xl mb-md text-on-surface font-medium leading-tight">Notificaciones WhatsApp</h3>
-<p class="font-rubik text-base text-on-surface-variant font-light leading-relaxed">Mensajes automáticos al cliente en cada etapa, sin intervención del equipo. Confirmaciones, actualizaciones de estatus y alertas, todo enviado en el momento exacto que importa.</p>
-</div>
-</article>
-
-<!-- Slide 2 -->
-<article data-cap-slide="1" class="snap-center shrink-0 w-[88%] md:w-[640px] lg:w-[720px] glass-panel rounded-xl p-xl flex flex-col md:flex-row gap-lg items-center md:items-stretch">
-<div class="flex-shrink-0 w-20 h-20 rounded-2xl bg-primary/15 flex items-center justify-center">
-<span class="material-symbols-outlined text-primary text-5xl">bolt</span>
-</div>
-<div class="flex-1 text-center md:text-left">
-<span class="font-label-caps text-primary mb-sm block tracking-widest text-[10px]">CAPACIDAD 02 / 04</span>
-<h3 class="font-rubik text-2xl md:text-3xl mb-md text-on-surface font-medium leading-tight">Respuesta en minutos</h3>
-<p class="font-rubik text-base text-on-surface-variant font-light leading-relaxed">El asistente responde en menos de 2 minutos, sin importar la hora del día. Sin filas, sin esperas, sin clientes frustrados que se van con la competencia mientras tu equipo descansa.</p>
-</div>
-</article>
-
-<!-- Slide 3 -->
-<article data-cap-slide="2" class="snap-center shrink-0 w-[88%] md:w-[640px] lg:w-[720px] glass-panel rounded-xl p-xl flex flex-col md:flex-row gap-lg items-center md:items-stretch">
-<div class="flex-shrink-0 w-20 h-20 rounded-2xl bg-primary/15 flex items-center justify-center">
-<span class="material-symbols-outlined text-primary text-5xl">monitoring</span>
-</div>
-<div class="flex-1 text-center md:text-left">
-<span class="font-label-caps text-primary mb-sm block tracking-widest text-[10px]">CAPACIDAD 03 / 04</span>
-<h3 class="font-rubik text-2xl md:text-3xl mb-md text-on-surface font-medium leading-tight">Visibilidad en tiempo real</h3>
-<p class="font-rubik text-base text-on-surface-variant font-light leading-relaxed">Panel de control con el estado de todas las operaciones. La dirección sabe qué pasa en cada momento, sin pedir reportes manuales ni armar dashboards a mano cada lunes.</p>
-</div>
-</article>
-
-<!-- Slide 4 -->
-<article data-cap-slide="3" class="snap-center shrink-0 w-[88%] md:w-[640px] lg:w-[720px] glass-panel rounded-xl p-xl flex flex-col md:flex-row gap-lg items-center md:items-stretch">
-<div class="flex-shrink-0 w-20 h-20 rounded-2xl bg-primary/15 flex items-center justify-center">
-<span class="material-symbols-outlined text-primary text-5xl">escalator_warning</span>
-</div>
-<div class="flex-1 text-center md:text-left">
-<span class="font-label-caps text-primary mb-sm block tracking-widest text-[10px]">CAPACIDAD 04 / 04</span>
-<h3 class="font-rubik text-2xl md:text-3xl mb-md text-on-surface font-medium leading-tight">Escalamiento inteligente</h3>
-<p class="font-rubik text-base text-on-surface-variant font-light leading-relaxed">El sistema detecta cuándo un humano debe intervenir y lo hace automáticamente. Tu equipo solo atiende lo que realmente requiere su criterio, no lo que un asistente puede resolver.</p>
-</div>
-</article>
-
-</div>
-
-<!-- Dots indicators -->
-<div id="cap-dots" class="flex justify-center gap-sm mt-lg">
-<button type="button" data-cap-dot="0" aria-label="Ir a capacidad 1" class="w-2.5 h-2.5 rounded-full bg-primary transition-colors duration-300 cursor-pointer"></button>
-<button type="button" data-cap-dot="1" aria-label="Ir a capacidad 2" class="w-2.5 h-2.5 rounded-full bg-primary/30 hover:bg-primary/60 transition-colors duration-300 cursor-pointer"></button>
-<button type="button" data-cap-dot="2" aria-label="Ir a capacidad 3" class="w-2.5 h-2.5 rounded-full bg-primary/30 hover:bg-primary/60 transition-colors duration-300 cursor-pointer"></button>
-<button type="button" data-cap-dot="3" aria-label="Ir a capacidad 4" class="w-2.5 h-2.5 rounded-full bg-primary/30 hover:bg-primary/60 transition-colors duration-300 cursor-pointer"></button>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- Resultados -->
-<section class="py-xxl bg-glow-primary">
-<div class="max-w-container-max mx-auto px-gutter">
-<div class="text-center mb-xxl">
-<span class="font-label-caps text-primary mb-sm block tracking-widest">RESULTADOS</span>
-<h2 class="font-rubik text-[40px] font-bold leading-tight">Métricas reales de operación.</h2>
-<p class="font-rubik text-on-surface-variant max-w-2xl mx-auto mt-md font-light">
-                    Sin promesas vacías. Esto es lo que nuestros sistemas entregan en producción.
-                </p>
-</div>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-md">
-<div class="glass-panel p-lg rounded-xl text-center">
-<p class="font-rubik text-5xl font-bold text-primary mb-sm">24/7</p>
-<p class="font-rubik text-xs text-on-surface-variant font-light uppercase tracking-widest mb-xs">Operación</p>
-<p class="font-rubik text-sm text-on-surface-variant font-light">Continua, sin pausas ni descansos</p>
-</div>
-<div class="glass-panel p-lg rounded-xl text-center">
-<p class="font-rubik text-5xl font-bold text-primary mb-sm">&lt; 2 min</p>
-<p class="font-rubik text-xs text-on-surface-variant font-light uppercase tracking-widest mb-xs">Tiempo respuesta</p>
-<p class="font-rubik text-sm text-on-surface-variant font-light">Promedio de respuesta al cliente</p>
-</div>
-<div class="glass-panel p-lg rounded-xl text-center">
-<p class="font-rubik text-5xl font-bold text-primary mb-sm">100%</p>
-<p class="font-rubik text-xs text-on-surface-variant font-light uppercase tracking-widest mb-xs">Trazabilidad</p>
-<p class="font-rubik text-sm text-on-surface-variant font-light">Mensajes con auditoría completa</p>
-</div>
-<div class="glass-panel p-lg rounded-xl text-center">
-<p class="font-rubik text-5xl font-bold text-primary mb-sm">+50%</p>
-<p class="font-rubik text-xs text-on-surface-variant font-light uppercase tracking-widest mb-xs">Capacidad</p>
-<p class="font-rubik text-sm text-on-surface-variant font-light">Adicional sin contratar más personal</p>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Diferenciador -->
-<section class="py-xxl bg-glow-primary border-y border-[#EFEFEF]">
-<div class="max-w-container-max mx-auto px-gutter">
-<div class="text-center mb-xxl">
-<span class="font-label-caps text-primary mb-sm block tracking-widest">NUESTRO DIFERENCIADOR</span>
-<h2 class="font-rubik text-[40px] font-bold leading-tight">¿Por qué Prospectum AI?</h2>
-<p class="font-rubik text-on-surface-variant max-w-2xl mx-auto mt-md font-light">
-                    En un mercado saturado de promesas vacías, somos la alternativa seria.
-                </p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-md mb-xxl">
-<div class="glass-panel p-lg rounded-xl">
-<div class="w-12 h-12 rounded-lg bg-primary/15 flex items-center justify-center mb-lg">
-<span class="material-symbols-outlined text-primary">school</span>
-</div>
-<h3 class="font-rubik text-xl mb-md text-on-surface font-medium">Coach, no proveedor</h3>
-<p class="font-rubik text-sm text-on-surface-variant leading-relaxed font-light">
-                            Implementamos, enseñamos y acompañamos. No instalamos la herramienta y nos vamos — construimos contigo y te enseñamos a operar.
-                        </p>
-</div>
-<div class="glass-panel p-lg rounded-xl">
-<div class="w-12 h-12 rounded-lg bg-primary/15 flex items-center justify-center mb-lg">
-<span class="material-symbols-outlined text-primary">verified</span>
-</div>
-<h3 class="font-rubik text-xl mb-md text-on-surface font-medium">Resultados medibles</h3>
-<p class="font-rubik text-sm text-on-surface-variant leading-relaxed font-light">
-                            Sin hype. Sin superlativos sin evidencia. Entregamos lo que decimos, con límites claros y métricas reales que puedes ver.
-                        </p>
-</div>
-<div class="glass-panel p-lg rounded-xl">
-<div class="w-12 h-12 rounded-lg bg-primary/15 flex items-center justify-center mb-lg">
-<span class="material-symbols-outlined text-primary">public</span>
-</div>
-<h3 class="font-rubik text-xl mb-md text-on-surface font-medium">Construido para México</h3>
-<p class="font-rubik text-sm text-on-surface-variant leading-relaxed font-light">
-                            Pensamos para el mercado mexicano y latinoamericano, con estándar de operación enterprise internacional.
-                        </p>
-</div>
-</div>
-<blockquote class="text-center max-w-3xl mx-auto">
-<p class="font-rubik text-2xl md:text-3xl font-light italic text-on-surface leading-snug">
-                    &ldquo;Automatizamos lo repetible. Los humanos hacen lo crítico.&rdquo;
-                </p>
-</blockquote>
-</div>
-</section>
-
-<!-- Final CTA -->
-<section id="contacto" class="py-xxl relative overflow-hidden bg-gradient-cta">
-<div class="max-w-container-max mx-auto px-gutter text-center relative z-10">
-<span class="font-label-caps text-white/90 mb-sm block tracking-widest">TRABAJEMOS JUNTOS</span>
-<h2 class="font-rubik text-[40px] mb-lg font-bold leading-tight text-white">¿Listo para que tu operación opere sola?</h2>
-<p class="font-rubik text-white/85 max-w-2xl mx-auto mb-xl font-light">
-                    Escríbenos y construimos juntos el sistema que tu empresa necesita.
-                </p>
-<div class="flex justify-center">
-<a href="mailto:paisa@prospectumai.com" class="bg-white text-[#3D42C9] font-label-caps px-xl py-md rounded-full hover:bg-[#FAFAFA] transition-all duration-300 active:scale-95 shadow-[0_8px_30px_rgba(0,0,0,0.2)] inline-flex items-center gap-sm">
-<span class="material-symbols-outlined text-base">mail</span>
-                        Escríbenos por correo
-                    </a>
-</div>
-<p class="font-rubik text-sm text-white/70 mt-lg font-light">paisa@prospectumai.com</p>
-</div>
-</section>
+  <section class="sec" id="contacto" style="padding-top:0">
+    <div class="wrap">
+      <div class="cta reveal">
+        <div>
+          <p class="over">Trabajemos juntos</p>
+          <h2>Cuéntanos cómo opera tu empresa hoy.</h2>
+          <p>En la primera conversación vemos un proceso real tuyo y te decimos qué se puede automatizar y qué no.</p>
+          <p class="cta-alt">
+            <a href="https://wa.me/529987655963" target="_blank" rel="noopener">WhatsApp +52 998 765 5963</a>
+            <a href="mailto:paisa@prospectumai.com">paisa@prospectumai.com</a>
+          </p>
+        </div>
+        <form class="form" id="form" method="post" action="/api/contact">
+          <label>Nombre<input name="nombre" required autocomplete="name" /></label>
+          <label>Correo<input type="email" name="email" required autocomplete="email" /></label>
+          <label>Empresa <em>opcional</em><input name="empresa" autocomplete="organization" /></label>
+          <label>WhatsApp <em>opcional</em><input name="telefono" inputmode="tel" autocomplete="tel" /></label>
+          <label class="full">¿Qué proceso quieres automatizar?<textarea name="mensaje" rows="4" required></textarea></label>
+          <button class="btn btn-p" type="submit">Enviar
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+          <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
 </main>
-<!-- Footer -->
-<footer class="bg-[#FAFAFA] w-full py-lg border-t border-[#EFEFEF]">
-<div class="max-w-container-max mx-auto px-gutter flex flex-col md:flex-row justify-between items-center gap-md">
-<div class="flex flex-col items-center md:items-start gap-xs">
-<img alt="Prospectum AI Logo" class="h-20 w-auto" src="/assets/pai-logo.png" />
-<p class="font-rubik text-sm text-black mt-sm font-medium">PROSPECTUM AI S.A.P.I. de C.V.</p>
-<p class="font-rubik text-xs text-[#72757A] font-light text-center md:text-left max-w-xs">Blvd. Luis Donaldo Colosio Mz. 3 Lt. 14, Loc. B12,<br/>Supermanzana 57, C.P. 77533<br/>Cancún, Quintana Roo, México</p>
-<p class="font-rubik text-xs text-[#72757A] mt-xs font-light">© 2026 Prospectum AI · Todos los derechos reservados</p>
-</div>
-<div class="flex flex-col md:items-end gap-xs">
-<a href="mailto:paisa@prospectumai.com" class="text-on-surface-variant font-rubik text-sm font-light hover:text-primary transition-colors duration-300">paisa@prospectumai.com</a>
-<a href="tel:+529987607973" class="text-on-surface-variant font-rubik text-sm font-light hover:text-primary transition-colors duration-300">+52 998 760 7973</a>
-<div class="flex gap-md mt-xs">
-<a href="/privacidad" class="text-on-surface-variant font-rubik text-sm font-light hover:text-primary transition-colors duration-300">Privacidad</a>
-<a href="/terminos" class="text-on-surface-variant font-rubik text-sm font-light hover:text-primary transition-colors duration-300">Términos</a>
-<a href="#contacto" class="text-on-surface-variant font-rubik text-sm font-light hover:text-primary transition-colors duration-300">Contacto</a>
-</div>
-</div>
-</div>
+
+<footer>
+  <div class="wrap f-grid">
+    <div>
+      <a class="logo" href="#top" aria-label="Prospectum AI, inicio"><b>Prospectum AI</b><svg viewBox="0 0 96 100" aria-hidden="true"><path fill="#3D42C9" fill-rule="evenodd" d="M0,33C0,14.8 14.8,0 33,0C38.5,0 43.8,1.4 48.4,4L79,21.6C89,27.4 95,38 95,50C95,62 89,72.6 79,78.4L48.4,96C43.8,98.6 38.5,100 33,100C14.8,100 0,85.2 0,67Z M12,40L46,20.5C57,14 70,20.5 70,33L70,67C70,79.5 57,86 46,79.5L12,60C4.5,55.6 4.5,44.4 12,40Z"/></svg></a>
+      <p style="margin-top:12px">PROSPECTUM AI S.A.P.I. de C.V. · Cancún, Quintana Roo</p>
+      <p class="mx" style="margin-top:8px">Empresa mexicana · hecha en Cancún</p>
+    </div>
+    <div class="f-links">
+      <a href="mailto:paisa@prospectumai.com">paisa@prospectumai.com</a>
+      <a href="tel:+529987655963">+52 998 765 5963</a>
+      <a href="/privacidad">Privacidad</a>
+      <a href="/terminos">Términos</a>
+    </div>
+  </div>
 </footer>
 
-<!-- Contact Modal -->
-<div id="contact-modal" class="hidden fixed inset-0 z-[100] items-center justify-center p-4 bg-black/70 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
-<div class="relative max-w-lg w-full bg-white border border-[#EFEFEF] rounded-xl p-xl shadow-[0_20px_60px_rgba(0,0,0,0.15)] max-h-[90vh] overflow-y-auto no-scrollbar">
-
-<button type="button" id="close-contact-modal" aria-label="Cerrar" class="absolute top-4 right-4 w-10 h-10 rounded-full hover:bg-black/[0.05] flex items-center justify-center transition-colors cursor-pointer z-10">
-<span class="material-symbols-outlined text-on-surface">close</span>
-</button>
-
-<div class="mb-lg pr-12">
-<span class="font-label-caps text-primary tracking-widest text-xs">CONTÁCTANOS</span>
-<h2 id="contact-modal-title" class="font-rubik text-3xl font-bold mt-sm leading-tight">Hablemos.</h2>
-<p class="font-rubik text-on-surface-variant mt-xs font-light text-sm">Cuéntanos sobre tu operación. Te respondemos en menos de 24 horas hábiles.</p>
-</div>
-
-<form id="contact-form" class="space-y-md">
-<div>
-<label for="cf-nombre" class="block text-xs font-rubik text-on-surface-variant mb-1 font-light">Nombre completo *</label>
-<input type="text" id="cf-nombre" name="nombre" required class="w-full bg-surface-container-low border border-[#EFEFEF] rounded-lg px-md py-sm font-rubik text-on-surface focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors placeholder:text-[#9CA0A6]" placeholder="Tu nombre" />
-</div>
-
-<div>
-<label for="cf-email" class="block text-xs font-rubik text-on-surface-variant mb-1 font-light">Correo electrónico *</label>
-<input type="email" id="cf-email" name="email" required class="w-full bg-surface-container-low border border-[#EFEFEF] rounded-lg px-md py-sm font-rubik text-on-surface focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors placeholder:text-[#9CA0A6]" placeholder="tu@empresa.com" />
-</div>
-
-<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
-<div>
-<label for="cf-empresa" class="block text-xs font-rubik text-on-surface-variant mb-1 font-light">Empresa</label>
-<input type="text" id="cf-empresa" name="empresa" class="w-full bg-surface-container-low border border-[#EFEFEF] rounded-lg px-md py-sm font-rubik text-on-surface focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors placeholder:text-[#9CA0A6]" placeholder="Tu empresa" />
-</div>
-<div>
-<label for="cf-telefono" class="block text-xs font-rubik text-on-surface-variant mb-1 font-light">WhatsApp</label>
-<input type="tel" id="cf-telefono" name="telefono" class="w-full bg-surface-container-low border border-[#EFEFEF] rounded-lg px-md py-sm font-rubik text-on-surface focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors placeholder:text-[#9CA0A6]" placeholder="+52 ..." />
-</div>
-</div>
-
-<div>
-<label for="cf-mensaje" class="block text-xs font-rubik text-on-surface-variant mb-1 font-light">¿En qué te podemos ayudar? *</label>
-<textarea id="cf-mensaje" name="mensaje" required rows="4" class="w-full bg-surface-container-low border border-[#EFEFEF] rounded-lg px-md py-sm font-rubik text-on-surface focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors resize-none placeholder:text-[#9CA0A6]" placeholder="Cuéntanos tu reto, qué te gustaría automatizar, en qué momento estás..."></textarea>
-</div>
-
-<button type="submit" class="w-full bg-[#3D42C9] text-white font-label-caps py-md rounded-full hover:bg-[#2E33A3] transition-all duration-300 active:scale-[0.98] flex items-center justify-center gap-sm">
-<span class="material-symbols-outlined text-base">send</span>
-Enviar mensaje
-</button>
-
-<p class="font-rubik text-xs text-center text-on-surface-variant font-light pt-xs">
-¿Prefieres escribir directo? <a href="mailto:paisa@prospectumai.com" class="text-primary hover:underline">paisa@prospectumai.com</a> · <a href="tel:+529987607973" class="text-primary hover:underline">+52 998 760 7973</a>
-</p>
-</form>
-
-</div>
-</div>
-
-<script is:inline>
-(function () {
-  var carousel = document.getElementById('cap-carousel');
-  if (!carousel) return;
-  var slides = carousel.querySelectorAll('[data-cap-slide]');
-  var dots = document.querySelectorAll('[data-cap-dot]');
-  var current = 0;
-
-  function updateDots() {
-    dots.forEach(function (d, i) {
-      if (i === current) {
-        d.classList.remove('bg-primary/30', 'hover:bg-primary/60');
-        d.classList.add('bg-primary');
-      } else {
-        d.classList.remove('bg-primary');
-        d.classList.add('bg-primary/30', 'hover:bg-primary/60');
-      }
-    });
-  }
-
-  function scrollToSlide(idx) {
-    idx = ((idx % slides.length) + slides.length) % slides.length;
-    current = idx;
-    var slide = slides[idx];
-    var offset = slide.offsetLeft - (carousel.clientWidth - slide.clientWidth) / 2;
-    carousel.scrollTo({ left: offset, behavior: 'smooth' });
-    updateDots();
-  }
-
-  // Click en dots — navega a slide específico (pausa autoplay 6s)
-  var resumeTimer = null;
-  dots.forEach(function (d) {
-    d.addEventListener('click', function () {
-      scrollToSlide(parseInt(d.dataset.capDot, 10));
-      stopAutoplay();
-      if (resumeTimer) clearTimeout(resumeTimer);
-      resumeTimer = setTimeout(startAutoplay, 6000);
-    });
-  });
-
-  // Keep dots in sync when user swipes/scrolls manually
-  var scrollTimeout;
-  carousel.addEventListener('scroll', function () {
-    clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(function () {
-      var center = carousel.scrollLeft + carousel.clientWidth / 2;
-      var closest = 0, minDist = Infinity;
-      slides.forEach(function (s, i) {
-        var slideCenter = s.offsetLeft + s.offsetWidth / 2;
-        var dist = Math.abs(slideCenter - center);
-        if (dist < minDist) { minDist = dist; closest = i; }
-      });
-      if (closest !== current) { current = closest; updateDots(); }
-    }, 100);
-  });
-
-  // Autoplay continuo cada 4s. NO pausa por hover. Loop infinito.
-  var autoplayTimer = null;
-  function startAutoplay() {
-    stopAutoplay();
-    autoplayTimer = setInterval(function () {
-      scrollToSlide(current + 1);
-    }, 4000);
-  }
-  function stopAutoplay() {
-    if (autoplayTimer) { clearInterval(autoplayTimer); autoplayTimer = null; }
-  }
-  // Pausa solo cuando la pestaña no es visible (no gastes ciclos)
-  document.addEventListener('visibilitychange', function () {
-    if (document.hidden) stopAutoplay();
-    else startAutoplay();
-  });
-  // Inicia inmediato
-  startAutoplay();
-})();
-
-// ─── Contact Modal ────────────────────────────────────────────
-(function () {
-  var modal = document.getElementById('contact-modal');
-  var openBtn = document.getElementById('open-contact-modal');
-  var closeBtn = document.getElementById('close-contact-modal');
-  var form = document.getElementById('contact-form');
-  if (!modal || !openBtn || !form) return;
-
-  function openModal() {
-    modal.classList.remove('hidden');
-    modal.classList.add('flex');
-    document.body.style.overflow = 'hidden';
-    setTimeout(function () { document.getElementById('cf-nombre').focus(); }, 50);
-  }
-  function closeModal() {
-    modal.classList.add('hidden');
-    modal.classList.remove('flex');
-    document.body.style.overflow = '';
-  }
-
-  openBtn.addEventListener('click', openModal);
-  if (closeBtn) closeBtn.addEventListener('click', closeModal);
-  modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
-  });
-})();
-</script>
-</body></html>
+<script is:inline src="/prospectum.js" defer></script>
+</Layout>

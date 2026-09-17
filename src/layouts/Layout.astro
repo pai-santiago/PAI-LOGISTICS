@@ -1,19 +1,32 @@
 ---
 interface Props {
 	title: string;
+	description?: string;
+	canonical?: string;
 }
 
-const { title } = Astro.props;
+const { title, description, canonical } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content={description ?? 'Prospectum AI'} />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		{canonical && <link rel="canonical" href={canonical} />}
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Rubik:wght@300;400;500;600&display=swap"
+		/>
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description ?? 'Prospectum AI'} />
+		{canonical && <meta property="og:url" content={canonical} />}
 		<title>{title}</title>
 	</head>
 	<body>
